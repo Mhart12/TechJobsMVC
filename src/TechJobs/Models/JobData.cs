@@ -36,6 +36,10 @@ namespace TechJobs.Models
                 {
                     values.Add(aValue);
                 }
+                else
+                {
+                    return values;
+                }
             }
 
             // Bonus mission: sort results alphabetically
@@ -63,9 +67,11 @@ namespace TechJobs.Models
                     if (aValue.ToLower().Contains(value.ToLower()))
                     {
                         jobs.Add(row);
-
                         // Finding one field in a job that matches is sufficient
-                        break;
+                    }
+                    else
+                    {
+                        return jobs;
                     }
                 }
             }
